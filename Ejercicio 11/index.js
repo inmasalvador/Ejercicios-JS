@@ -6,13 +6,16 @@ const users = [
     {username: 'abc123', age: 20, premium: true},
     {username: 'sergio58', age: 26, premium: true},
 ];
-const premiumTrue = users.filter(function(users){
-    return users.premium === true
-});
+const premiumTrue = users.filter(function(user){
 
-for (let i = 0; i < premiumTrue.length; i++) {
-    console.log(premiumTrue[i] + 'Usted es usuario Premium')
-};
+    //con if comprobamos si el usuario es premium, 
+    //si no cumple no entra en el if, ni se pinta por consola,
+    //ni se guarda en premiumTrue 
+
+    if(user.premium === true)
+        console.log(user.username + 'es premium');
+        return user
+});
 
 
 const premiumFalse = users.filter(function(users){
